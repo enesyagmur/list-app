@@ -1,16 +1,12 @@
 import React from "react";
 import "./CustomerForm.css";
 
-const CustomerForm = ({ setInput }) => {
-  const inputValue = (e) => {
-    if (e.keyCode === 13) {
-      setInput(e.target.value);
-    }
-  };
+const CustomerForm = () => {
 
   return (
-    <div>
-      <input type="text" onKeyDown={inputValue}></input>
+    <div className="customerform">
+      <input type="text" placeholder="Add a new customer" />
+      <button>+</button>
     </div>
   );
 };

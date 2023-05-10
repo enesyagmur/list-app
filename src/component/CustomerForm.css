@@ -1,0 +1,13 @@
+.customerform {
+  width: 340px;
+}
+.customerform input {
+  padding: 15px;
+  width: 72%;
+}
+.customerform button {
+  padding: 15px;
+  background-color: darkgreen;
+  color: white;
+  margin-left: 5px;
+}
