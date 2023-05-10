@@ -9,6 +9,7 @@ const CustomerForm = ({ addNewCustomer }) => {
         onKeyPress={(e) => {
           if (e.key === "Enter") {
             addNewCustomer(e.target.value);
+            e.target.value = "";
           }
         }}
       />
