@@ -4,7 +4,7 @@ import Customer from "./Customer";
 
 const CustomerList = ({ customers }) => {
   return (
-    <div>
+    <div className="customerList">
       {customers.map((item) => (
         <Customer name={item} />
       ))}
