@@ -1,12 +1,17 @@
-import React from "react";
 import "./CustomerForm.css";
 
-const CustomerForm = () => {
-
+const CustomerForm = ({ addNewCustomer }) => {
   return (
     <div className="customerform">
-      <input type="text" placeholder="Add a new customer" />
-      <button>+</button>
+      <input
+        type="text"
+        placeholder="Add a new customer"
+        onKeyPress={(e) => {
+          if (e.key === "Enter") {
+            addNewCustomer(e.target.value);
+          }
+        }}
+      />
     </div>
   );
 };
