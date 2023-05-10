@@ -8,13 +8,20 @@ function App() {
   const addNewCustomer = (customer) => {
     setCustomers([...Customers, customer]);
   };
-  console.log(Customers);
+
+  const removeCustomer = (removeItem) => {
+    let newCustomers = Customers.filter((item) => item !== removeItem);
+    setCustomers(newCustomers);
+  };
+
   return (
     <div className="App">
       <div className="form">
         <h1>Customer Manage System</h1>
         <CustomerForm addNewCustomer={addNewCustomer} />
-        <CustomerList customers={Customers} />
+        {Customers.length === 0 && "There are no customer..."}
+        {/* customers ın içi boş ise metin yazdırıyoruz */}
+        <CustomerList customers={Customers} removeCustomer={removeCustomer} />
       </div>
     </div>
   );
@@ -22,4 +29,4 @@ function App() {
 
 export default App;
 
-// enter a basılında inputa girilen değeri listeye ekle
+// silme işlemindeyim

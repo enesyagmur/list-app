@@ -7,9 +7,11 @@ const CustomerForm = ({ addNewCustomer }) => {
         type="text"
         placeholder="Add a new customer"
         onKeyPress={(e) => {
-          if (e.key === "Enter") {
-            addNewCustomer(e.target.value);
-            e.target.value = "";
+          if (e.target.value) {
+            if (e.key === "Enter") {
+              addNewCustomer(e.target.value);
+              e.target.value = "";
+            }
           }
         }}
       />
