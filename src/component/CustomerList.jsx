@@ -2,10 +2,12 @@ import React from "react";
 import "./CustomerList.css";
 import Customer from "./Customer";
 
-const CustomerList = () => {
+const CustomerList = ({ customers }) => {
   return (
     <div>
-      <Customer />
+      {customers.map((item) => (
+        <Customer name={item} />
+      ))}
     </div>
   );
 };

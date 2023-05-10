@@ -14,7 +14,7 @@ function App() {
       <div className="form">
         <h1>Customer Manage System</h1>
         <CustomerForm addNewCustomer={addNewCustomer} />
-        <CustomerList />
+        <CustomerList customers={Customers} />
       </div>
     </div>
   );
